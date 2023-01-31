@@ -34,7 +34,7 @@ printer = "$" + printer + "$"
 print((printer))
 
 printer_ML = MathMLPrinter().doprint(expression)
-printer_ML = printer_ML 
+printer_ML = "<math>\n" + printer_ML + "\n</math>"
 print((printer_ML))
       
 Element("outputformula").write(printer_ML)
