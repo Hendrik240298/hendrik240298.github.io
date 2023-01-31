@@ -1,34 +1,42 @@
 <html>
   <head>
-    <link rel="stylesheet" href="/pyscript.css" />
-    <script defer src="/pyscript.js"></script>
+    <title>Ice Cream Picker</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
   </head>
   <body>
-  <py-config>
-      packages = [
-      "bokeh",
-      "numpy"
-      ]
-  </py-config>
+
+    <py-config>
+      packages = ["matplotlib", "pandas"]
+    </py-config>
+
     <py-script>
-              import json
-              import pyodide
+      import pandas as pd
+      import matplotlib.pyplot as plt
 
-              from js import Bokeh, console, JSON
+      from pyodide.http import open_url
 
-              from bokeh.embed import json_item
-              from bokeh.plotting import figure
-              from bokeh.resources import CDN
+      url = (
+          "https://raw.githubusercontent.com/Cheukting/pyscript-ice-cream/main/bj-products.csv"
+      )
+      ice_data = pd.read_csv(open_url(url))
 
-              # create a new plot with default tools, using figure
-              p = figure(plot_width=400, plot_height=400)
+      def plot(data):
+        plt.rcParams["figure.figsize"] = (22,20)
+        fig, ax = plt.subplots()
+        bars = ax.barh(data["name"], data["rating"], height=0.7)
+        ax.bar_label(bars)
+        plt.title("Rating of ice cream flavours of your choice")
+        display(fig, target="graph-area", append=False)
 
-              # add a circle renderer with x and y coordinates, size, color, and alpha
-              p.circle([1, 2, 3, 4, 5], [6, 7, 2, 4, 5], size=15, line_color="navy", fill_color="orange", fill_alpha=0.5)
-              p_json = json.dumps(json_item(p, "myplot"))
-
-              Bokeh.embed.embed_item(JSON.parse(p_json))
+      plot(ice_data)
     </py-script>
+
+    <py-repl>
+      ice_data
+    </py-repl>
+
+    <div id="graph-area"></div>
   </body>
 </html>
-
