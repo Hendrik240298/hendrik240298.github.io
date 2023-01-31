@@ -7,8 +7,17 @@
   </head>
   <body>
     
+    
+    <py-config>
+      packages = ["sympy", "sympy.abc"]
+    </py-config>
+
     <py-script>
-        print('Hello, World!')
+        from sympy import roots
+        from sympy.abc import x, a, b, c
+        expression = (x+2)**2 * (x-3)
+        solution = solve(expression, x, dict=False)
+        print(solution)
     </py-script>
 
     <div id="graph-area"></div>
