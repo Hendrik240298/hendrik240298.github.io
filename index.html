@@ -14,11 +14,15 @@
     </py-config>
 
     <py-script>
-        from sympy import solve
-        from sympy.abc import x, a, b, c
-        expression = (x+2)**2 * (x-3)
-        solution = solve(expression, x, dict=False)
+        from sympy import solve, init_printing, Integral, sqrt, symbols
+        from sympy.abc import ns, a, b, c
+        x = symbols('x')
+        expression = (ns+2)**2 * (ns-3)
+        solution = solve(expression, xns, dict=False)
         print(solution)
+        
+        init_printing()
+        Integral(sqrt(1/x),x)
     </py-script>
 
     <div id="graph-area"></div>
