@@ -6,7 +6,8 @@
     <script defer src="https://pyscript.net/latest/pyscript.js"></script>
   </head>
   <body>
-    
+   <div id="outputformula" class="font-mono"></div>
+
     <py-config>
     packages = [
       "sympy",
@@ -29,6 +30,7 @@ for i in range(len(solution)):
 printer = LatexPrinter().doprint(expression)
 printer = "$" + printer + "$"
 print((printer))
+      Element("outputformula").write(printer)
     </py-script>
 
     <div id="graph-area"></div>
