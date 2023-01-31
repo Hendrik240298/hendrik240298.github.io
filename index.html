@@ -14,15 +14,21 @@
     </py-config>
 
     <py-script>
-        from sympy import solve, init_printing, Integral, sqrt, symbols
-        from sympy.abc import k, a, b, c
-        x = symbols('x')
-        expression = (k+2)**2 * (k-3)
-        solution = solve(expression, k, dict=False)
-        print(solution)
+from sympy import solve, init_printing, Integral, sqrt, symbols
+from sympy.printing.latex import LatexPrinter
+from sympy.abc import k, a, b, c
 
-        init_printing()
-        Integral(sqrt(1/x),x)
+
+x = symbols('x')
+expression = (k+2)**2 * (k-3)
+solution = solve(expression, k, dict=False)
+print(solution)
+for i in range(len(solution)):
+    print(f"x_{i+1}: {solution[i]}")
+
+printer = LatexPrinter().doprint(expression)
+printer = "$" + printer + "$"
+print((printer))
     </py-script>
 
     <div id="graph-area"></div>
