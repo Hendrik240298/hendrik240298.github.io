@@ -17,6 +17,8 @@
     <py-script>
 from sympy import solve, init_printing, Integral, sqrt, symbols
 from sympy.printing.latex import LatexPrinter
+from sympy.printing.mathml import MathMLPrinter
+
 from sympy.abc import k, a, b, c
 
 
@@ -30,7 +32,12 @@ for i in range(len(solution)):
 printer = LatexPrinter().doprint(expression)
 printer = "$" + printer + "$"
 print((printer))
-Element("outputformula").write(printer)
+
+printer_ML = MathMLPrinter().doprint(expression)
+printer_ML = printer_ML 
+print((printer_ML))
+      
+Element("outputformula").write(printer_ML)
     </py-script>
 
     <div id="graph-area"></div>
