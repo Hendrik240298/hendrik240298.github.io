@@ -14,7 +14,7 @@
     </py-config>
 
     <py-script>
-        from sympy import roots
+        from sympy import solve
         from sympy.abc import x, a, b, c
         expression = (x+2)**2 * (x-3)
         solution = solve(expression, x, dict=False)
