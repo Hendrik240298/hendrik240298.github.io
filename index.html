@@ -7,31 +7,48 @@
   </head>
   <body>
 
-                     <py-config>
+            <div id="mpl"></div>
+            <py-config>
             packages = [
-              "bokeh",
-              "numpy"
+              "matplotlib",
             ]
             </py-config>
-            <py-script id="main">
-              import json
-              import pyodide
+            <py-script>
+              import matplotlib.pyplot as plt
+              import matplotlib.tri as tri
+              import numpy as np
 
-              from js import Bokeh, console, JSON
+              # First create the x and y coordinates of the points.
+              n_angles = 36
+              n_radii = 8
+              min_radius = 0.25
+              radii = np.linspace(min_radius, 0.95, n_radii)
 
-              from bokeh.embed import json_item
-              from bokeh.plotting import figure
-              from bokeh.resources import CDN
+              angles = np.linspace(0, 2 * np.pi, n_angles, endpoint=False)
+              angles = np.repeat(angles[..., np.newaxis], n_radii, axis=1)
+              angles[:, 1::2] += np.pi / n_angles
 
-              # create a new plot with default tools, using figure
-              p = figure(plot_width=400, plot_height=400)
+              x = (radii * np.cos(angles)).flatten()
+              y = (radii * np.sin(angles)).flatten()
+              z = (np.cos(radii) * np.cos(3 * angles)).flatten()
 
-              # add a circle renderer with x and y coordinates, size, color, and alpha
-              p.circle([1, 2, 3, 4, 5], [6, 7, 2, 4, 5], size=15, line_color="navy", fill_color="orange", fill_alpha=0.5)
-              p_json = json.dumps(json_item(p, "myplot"))
+              # Create the Triangulation; no triangles so Delaunay triangulation created.
+              triang = tri.Triangulation(x, y)
 
-              Bokeh.embed.embed_item(JSON.parse(p_json))
+              # Mask off unwanted triangles.
+              triang.set_mask(np.hypot(x[triang.triangles].mean(axis=1),
+                                      y[triang.triangles].mean(axis=1))
+                              < min_radius)
+
+              fig1, ax1 = plt.subplots()
+              ax1.set_aspect('equal')
+              tpc = ax1.tripcolor(triang, z, shading='flat')
+              fig1.colorbar(tpc)
+              ax1.set_title('tripcolor of Delaunay triangulation, flat shading')
+
+              display(fig1, target="mpl")
             </py-script>
+
 
     <div id="graph-area"></div>
   </body>
