@@ -41,25 +41,32 @@
       import random
 
       a = random.randint(-10,10)
-      b= random.randint(-10,10)
+      b = random.randint(-10,10)
       c = random.randint(-10,10)
       expression = a*x**2 + b*x + c
-      solution = solve(expression, x, dict=False)
+      solution = solve(expression, x, dict=True)
       print(solution)
       for i in range(len(solution)):
           print(f"x_{i+1}:  {solution[i]}")
       
-      
-      s = MathMLPresentationPrinter()
-      xml = s._print(sympify(expression))
-      s.apply_patch()
-      pretty_xml = xml.toprettyxml()
-      s.restore_patch()
-      pretty_xml =  pretty_xml[:8] + '<mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo></mrow>' + pretty_xml[8:]
+      def generate_mathml(formula):
+          s = MathMLPresentationPrinter()
+          xml = s._print(sympify(formula))
+          s.apply_patch()
+          pretty_xml = xml.toprettyxml()
+          s.restore_patch()
+          return pretty_xml 
+
+      funk = generate_mathml(expression)
+      funk =  funk[:8] + '<mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo></mrow>' + funk[8:]
      
-      pretty_xml = '<math xmlns = "http://www.w3.org/1998/Math/MathML">' +  pretty_xml + '</math>'
+      funk = '<math xmlns = "http://www.w3.org/1998/Math/MathML">' +  funk + '</math>'
       c = document.getElementById('outputformula')
-      c.innerHTML = pretty_xml
+      c.innerHTML = funk
+
+
+
+
     </py-script>
 
     <div id="graph-area"></div>
