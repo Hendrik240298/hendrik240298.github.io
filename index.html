@@ -34,7 +34,7 @@ expression = (k+2)**2 * (k-3)
 solution = solve(expression, k, dict=False)
 print(solution)
 for i in range(len(solution)):
-    print(f"x_{i+1}: {solution[i]}")
+    print(f"x_{i+1}:  {solution[i]}")
 
 printer = LatexPrinter().doprint(expression)
 printer = "$" + printer + "$"
