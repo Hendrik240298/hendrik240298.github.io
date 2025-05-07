@@ -1236,7 +1236,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   margin-bottom: 30px;
   box-shadow: var(--shadow-1);
   z-index: 1;
-  max-width: 950px; /* Match the main container's max-width */
+  max-width: 900px; /* Match the main container's max-width */
   margin-inline: auto; /* Center the hero section */
 }
 
@@ -1244,7 +1244,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   display: flex;
   /* align-items: flex-start; */
   align-items: center;
-  gap: 50px;
+  gap: 100px;
 }
 
 .hero-image {
@@ -1367,6 +1367,19 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 /* Responsive adjustments for larger screens */
 @media (min-width: 768px) {
+    /* max-width for the hero section */
+    .hero-section {
+        max-width: 900px; /* Adjust the max-width for larger screens */
+        margin-inline: auto; /* Center the hero section */
+      }
+  .hero-contacts {
+    grid-template-columns: 1fr;
+    gap: 30px 50px;
+  }
+}
+
+/* Responsive adjustments for larger screens */
+@media (min-width: 1024px) {
     /* max-width for the hero section */
     .hero-section {
         max-width: 1300px; /* Adjust the max-width for larger screens */
@@ -1723,7 +1736,7 @@ textarea.form-input::-webkit-resizer { display: none; }
    * REUSED STYLE
    */
 
-  .sidebar, article { width: 700px; }
+  .sidebar, article { width: 900px; }
 
   .has-scrollbar::-webkit-scrollbar-button { width: 100px; }
 
