@@ -1,3 +1,5 @@
+> Kudos to [Sadee](https://github.com/codewithsadee) for this remarkable template. I have done some restructuring and simplifications for my needs, but the bulk of work is contributed by [Sadee](https://github.com/codewithsadee).
+
 # vCard - Personal portfolio (forked by Hendrik)
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/codewithsadee/vcard-personal-portfolio)
