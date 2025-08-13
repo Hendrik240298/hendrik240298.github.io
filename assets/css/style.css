@@ -736,14 +736,57 @@ main {
   font-size: var(--fs-4);
   line-height: 1.3;
   margin-bottom: 7px;
-text-transform: none; /* Remove any text-transform that might be causing capitalization */
+  text-transform: none; /* Keep titles as written */
 }
 
-.timeline-list span {
+/* Collapsible timeline enhancements */
+.timeline-item { cursor: pointer; }
+.timeline-text.is-collapsible {
+  /* Start collapsed; JS will add this class */
+  overflow: hidden;
+  transition: max-height var(--transition-short);
+}
+.timeline-item:not(.expanded) .timeline-text.is-collapsible {
+  max-height: 1.6em; /* one line visible (line-height: 1.6) */
+}
+.timeline-item.expanded .timeline-text.is-collapsible {
+  max-height: 1000px; /* JS sets precise value per item */
+}
+
+/* Row container so arrow sits next to the first line */
+.timeline-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.timeline-row .timeline-text { margin: 0; }
+
+/* Toggle arrow button (inline in the grid) */
+.timeline-toggle {
+  width: 1.6em; /* match first line height */
+  height: 1.6em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  color: var(--orange-yellow-crayola);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+.timeline-toggle:hover { background: rgba(255,255,255,0.06); }
+.timeline-toggle ion-icon { transition: transform 0.25s ease; }
+.timeline-item.expanded .timeline-toggle ion-icon { transform: rotate(180deg); }
+
+.timeline-item > span {
   color: var(--vegas-gold);
   font-weight: var(--fw-400);
   line-height: 1.6;
 }
+
+/* Ensure nested spans inside timeline text keep text color */
+.timeline-text span { color: inherit; }
 
 .timeline-item:not(:last-child)::before {
   content: "";
@@ -771,8 +814,88 @@ text-transform: none; /* Remove any text-transform that might be causing capital
   color: var(--light-gray);
   font-weight: var(--fw-300);
   line-height: 1.6;
+  /* leave a little space on the right so text doesn't hug the edge */
+  padding-right: 30px;
 }
 
+/* Sublist used inside timeline text (moved into details by JS).
+   Also style sublists placed as direct children of timeline items to avoid flash of mismatched styles. */
+.timeline-text .timeline-sublist,
+.timeline-text .timeline-sublist li,
+.timeline-item > .timeline-sublist,
+.timeline-item > .timeline-sublist li {
+  color: inherit;
+  font-weight: var(--fw-300);
+  line-height: 1.6;
+}
+.timeline-text .timeline-sublist,
+.timeline-item > .timeline-sublist {
+  margin: 6px 0 0 0.6em;  /* keep halved left indent and small top gap */
+  padding-left: 0.6em;    /* halved left indent */
+  padding-right: 30px; /* match .timeline-text right spacing */
+  list-style: none; /* use custom dot indicator to avoid global li reset */
+  font-size: 0.9em; /* reduce font size of the sublist */
+}
+.timeline-text .timeline-sublist-label,
+.timeline-item > .timeline-sublist-label {
+  font-size: 0.9em; /* match sublist size */
+  color: inherit;   /* ensure labels don't adopt the gold date color */
+}
+.timeline-text .timeline-sublist li + li,
+.timeline-item > .timeline-sublist li + li { margin-top: 4px; }
+
+/* Custom dot indicator for sublist items */
+.timeline-text .timeline-sublist li,
+.timeline-item > .timeline-sublist li {
+  position: relative;
+  padding-left: 0.8em; /* space for the dot */
+}
+.timeline-text .timeline-sublist li::before,
+.timeline-item > .timeline-sublist li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.8em; /* align with text baseline (line-height ~1.6) */
+  width: 0.32em;
+  height: 0.32em;
+  background: currentColor; /* keep style: match text color */
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+/* Collapsible timeline enhancements (scoped) */
+.timeline-item { cursor: pointer; }
+.timeline-text.is-collapsible {
+  overflow: hidden;
+  transition: max-height var(--transition-short);
+}
+.timeline-item:not(.expanded) .timeline-text.is-collapsible { max-height: 1.6em; }
+.timeline-item.expanded .timeline-text.is-collapsible { max-height: 1000px; }
+
+/* Toggle arrow button */
+.timeline-toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  color: var(--orange-yellow-crayola);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+.timeline-toggle:hover { background: rgba(255,255,255,0.06); }
+.timeline-toggle ion-icon { transition: transform 0.25s ease; }
+.timeline-item.expanded .timeline-toggle ion-icon { transform: rotate(180deg); }
+
+/* Space for the toggle so it doesn't overlap text */
+.timeline-item .h4.timeline-item-title,
+.timeline-item > span { padding-right: 40px; }
 
 /**
  * skills 
@@ -1201,7 +1324,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 }
 
 .hero-content {
-  flex-grow: ;
+  flex-grow: 1;
 }
 
 .hero-title {
@@ -1943,6 +2066,6 @@ textarea.form-input::-webkit-resizer { display: none; }
 	 * RESUME
 	 */
 
-  .timeline-text { max-width: 700px; }
+  .timeline-text { max-width: 1000px; }
 
 }
