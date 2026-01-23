@@ -17,10 +17,10 @@ params:
   mainSections: []
 
   assets:
-    favicon: "/images/logo.ico"
-    favicon16x16: "/images/logo.ico"
-    favicon32x32: "/images/logo.ico"
-    apple_touch_icon: "/images/logo.ico"
+    favicon: "/images/favicon.svg"
+    favicon16x16: "/images/favicon.svg"
+    favicon32x32: "/images/favicon.svg"
+    apple_touch_icon: "/images/favicon.svg"
 
 markup:
   goldmark:

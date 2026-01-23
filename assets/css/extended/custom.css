@@ -1,3 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600&family=Source+Serif+4:wght@400;600&display=swap');
+
+:root {
+  --nav-width: 960px;
+  --main-width: 720px;
+  --theme: #f7f3ea;
+  --entry: #f7f3ea;
+  --primary: #484848;
+  --secondary: #6d6a65;
+  --content: #484848;
+  --border: #d8d2c6;
+}
+
+body {
+  font-family: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 600;
+}
+
+a {
+  color: var(--primary);
+}
+
+a:visited {
+  color: var(--primary);
+}
+
+.list {
+  background: var(--theme);
+}
+
 .hero-split {
   display: flex;
   align-items: center;
@@ -6,19 +42,14 @@
   margin: 12px 0 28px;
 }
 
-:root {
-  --nav-width: 960px;
-}
-
 .hero-text {
-  flex: 1.1 1 0;
-  font-size: 1.05rem;
+  font-size: 1.1rem;
 }
 
 .hero-eyebrow {
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: var(--secondary);
   margin-bottom: 12px;
 }
@@ -41,8 +72,9 @@
   font-weight: 500;
 }
 
+
 .hero-photo {
-  flex: 0 0 220px;
+  flex: 0 0 242px;
 }
 
 .hero-photo img {
@@ -59,12 +91,12 @@
 
   .hero-photo {
     flex: none;
-    width: 220px;
+    width: 242px;
   }
 }
 
 @media (max-width: 600px) {
   .hero-photo {
-    width: 180px;
+    width: 198px;
   }
 }
