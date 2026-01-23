@@ -1,0 +1,52 @@
+baseURL: "https://hendrikfischer.org/"
+title: "Hendrik Fischer"
+languageCode: "en-us"
+theme: "PaperMod"
+enableRobotsTXT: true
+
+permalinks:
+  writing: /writing/:slug/
+
+params:
+  defaultTheme: light
+  disableThemeToggle: true
+  ShowReadingTime: false
+  ShowShareButtons: false
+  ShowPostNavLinks: false
+  showBreadCrumbs: false
+  mainSections: []
+
+  assets:
+    favicon: "/images/logo.ico"
+    favicon16x16: "/images/logo.ico"
+    favicon32x32: "/images/logo.ico"
+    apple_touch_icon: "/images/logo.ico"
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+menu:
+  main:
+    - name: About
+      url: /#about
+      weight: 1
+    - name: Projects
+      url: /#projects
+      weight: 2
+    - name: CV
+      url: /#cv
+      weight: 3
+    - name: Publications
+      url: /#publications
+      weight: 4
+    - name: Interests
+      url: /#interests
+      weight: 5
+    - name: Writing
+      url: /#writing
+      weight: 6
+    - name: Contact
+      url: /#contact
+      weight: 7
