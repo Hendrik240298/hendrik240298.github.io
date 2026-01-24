@@ -20,7 +20,7 @@ title: "Hendrik Fischer"
   </div>
 </div>
 
-## About me
+## About me {#about}
 
 I'm Hendrik Fischer - **a mathematician turned actuary** with a strong academic
 background in numerical mathematics and scientific computing. I earned my
@@ -37,7 +37,7 @@ development, and Bitcoin. I enjoy leveraging Python and AI to solve complex
 problems and build automations that make my life easier (like building this website; thanks [opencode](https://opencode.ai))
 
 By uniting theoretical knowledge with practical skills, I am driven to turn ideas
-into impactful solutions—always learning, always pushing boundaries.
+into impactful solutions - always learning, always pushing boundaries.
 
 > **My professional Philosphy:** As an actuary, I leverage my expertise in
 > mathematical modeling and scientific computing, along with my passion for economics,
@@ -54,7 +54,7 @@ into impactful solutions—always learning, always pushing boundaries.
 <!-- - [Reporting Companion](https://github.com/Hendrik240298) -->
 <!--   - Automated narrative summaries for quarterly reserving updates. -->
 
-## My Resume
+## My Resume {#cv}
 
 Full background and publications in two pages. [Download CV (PDF)](/cv.pdf)
 
@@ -84,20 +84,19 @@ Full background and publications in two pages. [Download CV (PDF)](/cv.pdf)
 - **2016-2019: B.Sc. Technomathematics, Technische Universität Hamburg**
   - Bachelor thesis: "Analysis of the Interaction of Weakly Nonlinear Water Waves"
 
-## Publications
+### Publications
 
 - Goal-oriented error control for space-time reduced-order modeling using incremental proper
-  orthogonal decomposition (2024) — H. Fischer.
+  orthogonal decomposition (2024) - H. Fischer.
 - An Incremental Singular Value Decomposition Approach for Large-Scale Spatially Parallel &
-  Distributed but Temporally Serial Data -- Applied to Technical Flows (2024) — N. Kühl,
+  Distributed but Temporally Serial Data -- Applied to Technical Flows (2024) - N. Kühl,
   H. Fischer, M. Hinze & T. Rung.
 - Adaptive space-time model order reduction with dual-weighted residual (MORe DWR) error
-  control for poroelasticity (2023) — H. Fischer, J. Roth, L. Chamoin, A. Fau,
+  control for poroelasticity (2023) - H. Fischer, J. Roth, L. Chamoin, A. Fau,
   M. F. Wheeler & T. Wick.
-- MORe DWR: Space-time goal-oriented error control for incremental POD-based ROM (2023)
-  — H. Fischer, J. Roth, T. Wick, L. Chamoin & A. Fau.
-- Reduced-order modeling for parametrized time-dependent Navier-Stokes equations (2023)
-  — H. Fischer, T. Wick & A. Fau.
+- MORe DWR: Space-time goal-oriented error control for incremental POD-based ROM (2023) - H. Fischer, J. Roth, T. Wick, L. Chamoin &
+  A. Fau.
+- Reduced-order modeling for parametrized time-dependent Navier-Stokes equations (2023) - H. Fischer, T. Wick & A. Fau.
 
 <!-- ## Interests -->
 <!---->
@@ -115,7 +114,7 @@ Full background and publications in two pages. [Download CV (PDF)](/cv.pdf)
 <!---->
 <!-- More posts soon. -->
 
-## Contact
+## Contact {#contact}
 
 Email me at [contact@hendrikfischer.org](mailto:contact@hendrikfischer.org).
 
