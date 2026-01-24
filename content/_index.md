@@ -4,10 +4,8 @@ title: "Hendrik Fischer"
 
 <div class="hero-split">
   <div class="hero-text">
+    <h1 class="hero-name">Hendrik Fischer</h1>
     <p class="hero-eyebrow">Actuary | PhD in Mathematics</p>
-    <p class="hero-intro">
-      I am a reserving actuary dedicated to develop Python-based actuarial solutions.
-    </p>
     <ul class="hero-links">
       <li><a href="https://www.linkedin.com/in/hendrikfischer24/">LinkedIn</a></li>
       <li><a href="https://github.com/Hendrik240298">GitHub</a></li>
@@ -22,41 +20,24 @@ title: "Hendrik Fischer"
 
 ## About me {#about}
 
-I'm Hendrik Fischer - **a mathematician turned actuary** with a strong academic
-background in numerical mathematics and scientific computing. I earned my
-**PhD from Leibniz University Hannover**, where my research focused on reduced-order
-modeling for physical systems such as fluid dynamics and porous media. I developed
-data-driven numerical models designed to minimize computational effort by
-dynamically adapting to new parametric conditions.
+I am Hendrik, **a mathematician turned actuary** with an academic background in numerical mathematics and scientific computing.
+I earned my **PhD from Leibniz University Hannover** researching reduced-order modeling for physical systems such as fluid dynamics and porous media.
+There, I developed data-driven numerical models designed to minimize computational effort by dynamically adapting to new parametric conditions.
 
-In 2024, **I transitioned into the insurance industry as a reserving actuary**, and
-I am currently **pursuing qualification as a DAV actuary**.
+After my PhD in 2024, **I transitioned into the insurance industry as a reserving actuary**, and I am currently **pursuing qualification as a DAV actuary**.
+My work can be summarized by this credo:
 
-Outside of work, I am passionate about Austrian economics, investing, personal
-development, and Bitcoin. I enjoy leveraging Python and AI to solve complex
-problems and build automations that make my life easier (like building this website; thanks [opencode](https://opencode.ai))
+> **Actuaries write code.**[^cypherpunk]
+> As modern actuaries, we move beyond spreadsheets and proprietary black boxes. We build reliable, open, and transparent systems - tools that scale and last.
 
-By uniting theoretical knowledge with practical skills, I am driven to turn ideas
-into impactful solutions - always learning, always pushing boundaries.
+[^cypherpunk]: Paraphrased from Eric Hughes' [A Cypherpunk's Manifest](https://nakamotoinstitute.org/library/cypherpunk-manifesto/)
 
-> **My professional Philosphy:** As an actuary, I leverage my expertise in
-> mathematical modeling and scientific computing, along with my passion for economics,
-> finance, and programming, to analyze risk and navigate uncertainty.
-
-<!-- ## Projects -->
-<!---->
-<!-- - [Reserving Automation Toolkit](https://github.com/Hendrik240298) -->
-<!--   - Python workflows for reproducible triangles, diagnostics, and dashboards. -->
-<!-- - [Scenario Bench](https://github.com/Hendrik240298) -->
-<!--   - Lightweight stress testing templates with traceable assumptions. -->
-<!-- - [Model Order Notes](https://github.com/Hendrik240298) -->
-<!--   - Research summaries on reduced-order modeling and practical applications. -->
-<!-- - [Reporting Companion](https://github.com/Hendrik240298) -->
-<!--   - Automated narrative summaries for quarterly reserving updates. -->
+Outside of work, I am passionate about programming, investing, personal development, and Bitcoin (not crypto).
+I feel most comfortable using Python and AI to tackle challenges I encounter both at work and beyond, and I love building automations that make my life easier (like building this website; thanks [opencode](https://opencode.ai)).
 
 ## My Resume {#cv}
 
-Full background and publications in two pages. [Download CV (PDF)](/cv.pdf)
+Full background and publications in one PDF. [Download CV (PDF)](/cv.pdf)
 
 ### Work Experience
 
@@ -76,6 +57,30 @@ Full background and publications in two pages. [Download CV (PDF)](/cv.pdf)
 
 Selected papers and conferences are listed on the
 [academic contributions page](/publications/).
+
+## Current Projects {#projects}
+
+### Work
+
+- Attritional/large-loss splitting approach for reserving
+  - Finding optimal large-loss threshold
+  - Attritional reserving using [`chainladder-python`](https://github.com/casact/chainladder-python)
+  - Large-loss projections based on frequency-severity analysis using GLMs and Monte Carlo simulations
+- Coordinating resegmentation of reserving segments
+  - Building an automated mapping approach that reflects the new business logic
+  - Building new analysis tools within `python` and `chainladder-python` to support mapping decisions
+
+### Personal
+
+- [`chainladder-python`](https://github.com/casact/chainladder-python)
+  - Familiarizing myself with, using, and contributing to this fantastic open-source reserving library
+- AI-assisted math tutoring
+  - Agentic approach using `opencode` alongside `latex` and `markdown` (Obsidian) to create student-tailored lessons and exercises
+  - (Not yet open source)
+- Sharpen-the-saw projects
+  - Learning [Colemak](https://colemak.com/)
+  - Learning [LazyVim](https://www.lazyvim.org/)
+  - `pandas` deep dive with Udemy course: *The Complete Pandas Bootcamp*
 
 <!-- ## Interests -->
 <!---->

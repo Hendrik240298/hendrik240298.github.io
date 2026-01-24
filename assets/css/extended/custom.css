@@ -9,6 +9,8 @@
   --secondary: #6d6a65;
   --content: #484848;
   --border: #d8d2c6;
+  --code-bg: #efe9dd;
+  --code-block-bg: #e6dfd3;
 }
 
 body {
@@ -43,12 +45,18 @@ a:visited {
   font-size: 1.1rem;
 }
 
-.hero-eyebrow {
+.hero-text .hero-name {
+  font-size: 2.6rem;
+  line-height: 1.1;
+  margin: 0 0 8px;
+}
+
+.hero-text .hero-eyebrow {
   text-transform: uppercase;
   letter-spacing: 0.12em;
   font-size: 1.3rem;
   color: var(--secondary);
-  margin-bottom: 12px;
+  margin: 0 0 8px;
 }
 
 .hero-intro {
@@ -70,7 +78,7 @@ a:visited {
 }
 
 .hero-photo {
-  flex: 0 0 242px;
+  flex: 0 0 278px;
 }
 
 .hero-photo img {
@@ -87,12 +95,12 @@ a:visited {
 
   .hero-photo {
     flex: none;
-    width: 242px;
+    width: 278px;
   }
 }
 
 @media (max-width: 600px) {
   .hero-photo {
-    width: 198px;
+    width: 228px;
   }
 }

@@ -24,6 +24,8 @@ params:
 
 markup:
   goldmark:
+    extensions:
+      footnote: true
     renderer:
       unsafe: true
 
@@ -35,6 +37,9 @@ menu:
     - name: CV
       url: /#cv
       weight: 2
+    - name: Projects
+      url: /#projects
+      weight: 3
     - name: Contact
       url: /#contact
-      weight: 3
+      weight: 4
