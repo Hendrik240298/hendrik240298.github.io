@@ -31,6 +31,13 @@ a:visited {
   background: var(--theme);
 }
 
+#menu {
+  white-space: normal;
+  overflow-x: visible;
+  flex-wrap: wrap;
+  row-gap: 6px;
+}
+
 .hero-split {
   display: flex;
   align-items: center;
