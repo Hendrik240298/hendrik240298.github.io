@@ -37,7 +37,7 @@ I feel most comfortable using Python and AI to tackle challenges I encounter bot
 
 ## My Resume {#cv}
 
-Full background and publications in one PDF. [Download CV (PDF)](/cv.pdf)
+Full background and publications in one PDF. [Download CV (PDF)](/files/cv/CV_Hendrik_Fischer.pdf)
 
 ### Work Experience
 
