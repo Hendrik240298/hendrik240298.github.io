@@ -72,8 +72,8 @@ Selected papers and conferences are listed on the
 
 ### Personal
 
-- [`chainladder-python`](https://github.com/casact/chainladder-python)
-  - Familiarizing myself with, using, and contributing to this fantastic open-source reserving library
+- [`reserving-studio`](https://github.com/Hendrik240298/reserving-studio)
+  - Exploring and building with [`chainladder-python`](https://github.com/casact/chainladder-python) as part of this project
 - AI-assisted math tutoring
   - Agentic approach using `opencode` alongside `latex` and `markdown` (Obsidian) to create student-tailored lessons and exercises
   - (Not yet open source)
