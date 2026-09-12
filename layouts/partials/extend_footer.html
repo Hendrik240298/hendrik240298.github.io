@@ -40,7 +40,6 @@
           const reference = document.createElement(pageUrl ? 'a' : 'span');
           reference.className = isEmbed ? 'wikilink wikilink-embed' : 'wikilink';
           reference.textContent = label || target;
-          reference.title = `Obsidian reference: ${target}${heading ? `#${heading}` : ''}`;
           if (pageUrl) {
             reference.href = heading ? `${pageUrl}#${heading}` : pageUrl;
           }

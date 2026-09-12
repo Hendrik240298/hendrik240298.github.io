@@ -4,6 +4,8 @@ slug: "Colemak"
 date: 2026-09-11
 ---
 
+>At current state, this is just a test note for checking hugo capability and using Obsidian-like backlings.
+
 - I am learning Colemak since the beginning of [[2026]]
 - The main motivation was [[The Primeagen]] talking about [[Touch Typing]] to be essential and [[Tim Ferris]] in his book [[Tools of Titans]] talking with Matt of Automattic that [[Colemak]] is the best layout. Thus, if I am learning touch typing then correctly and once and for all. Also I disliked my error rate with hunt and peck typing which was really annoying during focused coding lessons
 - I also bought my [[Keychron Q11]] split mechanical keyboard end of march and it arrived mid April
