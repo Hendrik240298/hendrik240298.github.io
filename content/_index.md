@@ -78,7 +78,7 @@ Selected papers and conferences are listed on the
   - Agentic approach using `opencode` alongside `latex` and `markdown` (Obsidian) to create student-tailored lessons and exercises
   - (Not yet open source)
 - Sharpen-the-saw projects
-  - Learning [Colemak](https://colemak.com/)
+  - Learning [[Colemak]]
   - Learning [LazyVim](https://www.lazyvim.org/)
   - `pandas` deep dive with Udemy course: *The Complete Pandas Bootcamp*
 

@@ -1,6 +1,6 @@
 baseURL: "https://hendrikfischer.org/"
 title: "Hendrik Fischer"
-languageCode: "en-us"
+locale: "en-us"
 theme: "PaperMod"
 enableRobotsTXT: true
 
@@ -8,6 +8,7 @@ permalinks:
   writing: /writing/:slug/
 
 params:
+  author: "Hendrik Fischer"
   defaultTheme: light
   disableThemeToggle: true
   ShowReadingTime: false

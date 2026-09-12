@@ -83,6 +83,18 @@ a:visited {
   font-weight: 500;
 }
 
+.wikilink {
+  color: var(--secondary);
+  border-bottom: 1px dotted currentcolor;
+  font-family: 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.9em;
+  font-weight: 600;
+}
+
+.wikilink-embed {
+  border-bottom-style: solid;
+}
+
 .hero-photo {
   flex: 0 0 278px;
 }

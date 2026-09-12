@@ -1,0 +1,58 @@
+{{- $wikiPages := dict }}
+{{- range site.RegularPages }}
+  {{- $page := . }}
+  {{- with .File }}
+    {{- $wikiPages = merge $wikiPages (dict (lower .BaseFileName) $page.RelPermalink) }}
+    {{- $wikiPages = merge $wikiPages (dict (lower $page.Title) $page.RelPermalink) }}
+  {{- end }}
+{{- end }}
+<script>
+  (() => {
+    const wikilinkPattern = /(!)?\[\[([^\]|#]+?)(?:#([^\]|]+))?(?:\|([^\]]+))?\]\]/g;
+    const ignoredTags = new Set(['A', 'CODE', 'PRE', 'SCRIPT', 'STYLE', 'TEXTAREA']);
+    const wikiPages = {{ $wikiPages | jsonify | safeJS }};
+
+    document.querySelectorAll('.post-content, .entry-content').forEach((container) => {
+      const walker = document.createTreeWalker(container, NodeFilter.SHOW_TEXT);
+      const textNodes = [];
+
+      while (walker.nextNode()) {
+        const node = walker.currentNode;
+        if (!ignoredTags.has(node.parentElement.tagName) && node.nodeValue.includes('[[')) {
+          textNodes.push(node);
+        }
+      }
+
+      textNodes.forEach((node) => {
+        wikilinkPattern.lastIndex = 0;
+        if (!wikilinkPattern.test(node.nodeValue)) {
+          return;
+        }
+
+        wikilinkPattern.lastIndex = 0;
+        const fragment = document.createDocumentFragment();
+        let lastIndex = 0;
+
+        node.nodeValue.replace(wikilinkPattern, (match, isEmbed, target, heading, label, index) => {
+          fragment.append(document.createTextNode(node.nodeValue.slice(lastIndex, index)));
+
+          const pageUrl = !isEmbed && wikiPages[target.trim().toLowerCase()];
+          const reference = document.createElement(pageUrl ? 'a' : 'span');
+          reference.className = isEmbed ? 'wikilink wikilink-embed' : 'wikilink';
+          reference.textContent = label || target;
+          reference.title = `Obsidian reference: ${target}${heading ? `#${heading}` : ''}`;
+          if (pageUrl) {
+            reference.href = heading ? `${pageUrl}#${heading}` : pageUrl;
+          }
+          fragment.append(reference);
+
+          lastIndex = index + match.length;
+          return match;
+        });
+
+        fragment.append(document.createTextNode(node.nodeValue.slice(lastIndex)));
+        node.replaceWith(fragment);
+      });
+    });
+  })();
+</script>

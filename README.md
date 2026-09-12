@@ -1,46 +1,35 @@
-> Kudos to [Sadee](https://github.com/codewithsadee) for this remarkable template. I have done some restructuring and simplifications for my needs, but the bulk of work is contributed by [Sadee](https://github.com/codewithsadee).
+# Hendrik Fischer
 
-# vCard - Personal portfolio (My version)
+Personal website built with [Hugo](https://gohugo.io/) and the bundled [PaperMod](https://github.com/adityatelange/hugo-PaperMod) theme.
 
-![GitHub repo size](https://img.shields.io/github/repo-size/codewithsadee/vcard-personal-portfolio)
-![GitHub stars](https://img.shields.io/github/stars/codewithsadee/vcard-personal-portfolio?style=social)
-![GitHub forks](https://img.shields.io/github/forks/codewithsadee/vcard-personal-portfolio?style=social)
-[![Twitter Follow](https://img.shields.io/twitter/follow/codewithsadee_?style=social)](https://twitter.com/intent/follow?screen_name=codewithsadee_)
-[![YouTube Video Views](https://img.shields.io/youtube/views/SoxmIlgf2zM?style=social)](https://youtu.be/SoxmIlgf2zM)
+## Development
 
-vCard is a fully responsive personal portfolio website, responsive for all devices, built using HTML, CSS, and JavaScript.
-
-## Demo
-
-![vCard Desktop Demo](./website-demo-image/desktop.png "Desktop Demo")
-![vCard Mobile Demo](./website-demo-image/mobile.png "Mobile Demo")
-
-## Prerequisites
-
-Before you begin, ensure you have met the following requirements:
-
-* [Git](https://git-scm.com/downloads "Download Git") must be installed on your operating system.
-
-## Installing vCard
-
-To install **vCard**, follow these steps:
-
-Linux and macOS:
+Use Hugo Extended 0.146.0 or newer.
 
 ```bash
-sudo git clone https://github.com/codewithsadee/vcard-personal-portfolio.git
+hugo server
 ```
 
-Windows:
+Build the production site with:
 
 ```bash
-git clone https://github.com/codewithsadee/vcard-personal-portfolio.git
+hugo --minify
 ```
 
-## Contact
+Pushes to `master` are built and deployed to GitHub Pages by `.github/workflows/hugo.yml`.
 
-If you want to contact me you can reach me at [Twitter](https://www.twitter.com/codewithsadee).
+## Writing From Obsidian
 
-## License
+Create public notes in `content/writing/` with Hugo front matter:
 
-MIT
+```md
+---
+title: "Readable Note Title"
+slug: "stable-url-name"
+date: 2026-09-11
+---
+```
+
+Use `[[Readable Note Title]]` to link to a published note. Wikilinks match another page's title or filename without `.md`; `slug` only controls the destination URL. Unmatched references remain styled text rather than broken links.
+
+Obsidian embeds such as `![[image.png]]` are not published as images. Copy an image to `static/images/` and use standard Markdown instead: `![](/images/image.png)`.
