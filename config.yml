@@ -42,6 +42,9 @@ menu:
     - name: Projects
       url: /#projects
       weight: 3
+    - name: Writing
+      url: /writing/
+      weight: 4
     - name: Contact
       url: /#contact
-      weight: 4
+      weight: 5
