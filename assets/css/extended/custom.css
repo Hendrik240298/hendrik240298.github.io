@@ -127,6 +127,11 @@ a:hover {
   gap: 10px 18px;
 }
 
+.post-content .hero-links {
+  margin: 0;
+  padding-inline-start: 0;
+}
+
 .hero-links a {
   font-family: 'Noto Sans Mono', 'JetBrains Mono', monospace;
   font-size: 0.8rem;
