@@ -2,7 +2,10 @@
 title: "Hendrik Fischer"
 ---
 
-<div class="hero-split">
+<div class="hero">
+  <div class="hero-photo">
+    <img src="/images/photo_hendrik.png" alt="Hendrik Fischer">
+  </div>
   <div class="hero-text">
     <h1 class="hero-name">Hendrik Fischer</h1>
     <p class="hero-eyebrow">Actuary | PhD in Mathematics</p>
@@ -12,9 +15,6 @@ title: "Hendrik Fischer"
       <li><a href="https://scholar.google.de/citations?user=nfEU9yoAAAAJ&hl">Google Scholar</a></li>
       <li><a href="mailto:contact@hendrikfischer.org">Email</a></li>
     </ul>
-  </div>
-  <div class="hero-photo">
-    <img src="/images/photo_hendrik.png" alt="Hendrik Fischer">
   </div>
 </div>
 
@@ -64,7 +64,7 @@ Selected papers and conferences are listed on the
 
 - Attritional/large-loss splitting approach for reserving
   - Finding optimal large-loss threshold
-  - Attritional reserving using [`chainladder-python`](https://github.com/casact/chainladder-python)
+  - Attritional reserving using [chainladder-python](https://github.com/casact/chainladder-python)
   - Large-loss projections based on frequency-severity analysis using GLMs and Monte Carlo simulations
 - Coordinating resegmentation of reserving segments
   - Building an automated mapping approach that reflects the new business logic
@@ -72,8 +72,8 @@ Selected papers and conferences are listed on the
 
 ### Personal
 
-- [`reserving-studio`](https://github.com/Hendrik240298/reserving-studio)
-  - Building a reserving workflow with a minimalistic GUI on top of [`chainladder-python`](https://github.com/casact/chainladder-python)
+- [reserving-studio](https://github.com/Hendrik240298/reserving-studio)
+  - Building a reserving workflow with a minimalistic GUI on top of [chainladder-python](https://github.com/casact/chainladder-python)
 - AI-assisted math tutoring
   - Agentic approach using `opencode` alongside `latex` and `markdown` (Obsidian) to create student-tailored lessons and exercises
   - (Not yet open source)

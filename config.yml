@@ -9,11 +9,12 @@ permalinks:
 
 params:
   author: "Hendrik Fischer"
-  defaultTheme: light
+  defaultTheme: dark
   disableThemeToggle: true
   ShowReadingTime: false
   ShowShareButtons: false
   ShowPostNavLinks: false
+  hideAuthor: true
   showBreadCrumbs: false
   mainSections: []
 
