@@ -4,7 +4,7 @@ title: "Hendrik Fischer"
 
 <div class="hero">
   <div class="hero-photo">
-    <img src="/images/photo_hendrik.png" alt="Hendrik Fischer">
+    <img src="/images/Image_by_Ozan1_circle.png" alt="Hendrik Fischer">
   </div>
   <div class="hero-text">
     <h1 class="hero-name">Hendrik Fischer</h1>

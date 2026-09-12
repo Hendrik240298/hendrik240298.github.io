@@ -14,7 +14,10 @@ date: 2026-09-11
 - I use [[Vim Motions]] everywhere I can and code to 100% in [[Python]] thus I wanted to optimize my keyboard to get the best experience and improve ergonomics
 - *The goal is to never leave the keyboard*
 - my current keyboard layout has 3 layers for my colemak typing and a forth default qwerty for [[Gaming]]. it is the result of some iterations over weeks or months
-	- L0: default typing layer; access L1 via right fn and L3 via long pressing right space![[Pasted image 20260911233043.png]]
-	- L1: programming layer; all frequently used symbols symmetrical at home row (inspired by [[The Primeagen]]) as well as vim `hjkl` for non vim apps ![[Pasted image 20260911233114.png]]
+	- L0: default typing layer; access L1 via right fn and L3 via long pressing right space
+	  ![[Pasted image 20260911233043.png]]
+	- L1: programming layer; all frequently used symbols symmetrical at home row (inspired by [[The Primeagen]]) as well as vim `hjkl` for non vim apps
+	  ![[Pasted image 20260911233114.png]]
 	- L2: QWERTY
-	- L3: German Umlaute on corresponding chars![[Pasted image 20260911233357.png]]
+	- L3: German Umlaute on corresponding chars
+	  ![[Pasted image 20260911233357.png]]

@@ -156,12 +156,16 @@ a.wikilink:hover {
 }
 
 .wikilink-embed {
-  border-bottom-style: solid;
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0.75rem 0;
+  border: 1px solid var(--border);
 }
 
 .hero-photo {
   flex: none;
-  width: 172px;
+  width: 224px;
 }
 
 .hero-photo img {
@@ -222,6 +226,6 @@ a.wikilink:hover {
   }
 
   .hero-photo {
-    width: 132px;
+    width: 172px;
   }
 }

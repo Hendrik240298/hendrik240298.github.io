@@ -1,4 +1,4 @@
-baseURL: "https://hendrikfischer.org/"
+baseURL: "http://localhost:1313/"
 title: "Hendrik Fischer"
 locale: "en-us"
 theme: "PaperMod"

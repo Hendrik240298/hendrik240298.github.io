@@ -36,14 +36,24 @@
         node.nodeValue.replace(wikilinkPattern, (match, isEmbed, target, heading, label, index) => {
           fragment.append(document.createTextNode(node.nodeValue.slice(lastIndex, index)));
 
-          const pageUrl = !isEmbed && wikiPages[target.trim().toLowerCase()];
-          const reference = document.createElement(pageUrl ? 'a' : 'span');
-          reference.className = isEmbed ? 'wikilink wikilink-embed' : 'wikilink';
-          reference.textContent = label || target;
-          if (pageUrl) {
-            reference.href = heading ? `${pageUrl}#${heading}` : pageUrl;
+          if (isEmbed) {
+            const image = document.createElement('img');
+            const imagePath = target.trim().split('/').map(encodeURIComponent).join('/');
+            image.className = 'wikilink-embed';
+            image.src = `/images/attachments/${imagePath}`;
+            image.alt = label || target;
+            image.loading = 'lazy';
+            fragment.append(image);
+          } else {
+            const pageUrl = wikiPages[target.trim().toLowerCase()];
+            const reference = document.createElement(pageUrl ? 'a' : 'span');
+            reference.className = 'wikilink';
+            reference.textContent = label || target;
+            if (pageUrl) {
+              reference.href = heading ? `${pageUrl}#${heading}` : pageUrl;
+            }
+            fragment.append(reference);
           }
-          fragment.append(reference);
 
           lastIndex = index + match.length;
           return match;

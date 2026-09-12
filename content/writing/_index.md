@@ -2,4 +2,4 @@
 title: "Writing"
 ---
 
-Short notes on actuarial tooling, model reduction, and decision making.
+My thoughts and notes on deep work, coding, linux, actuarial work, AI, Obsidian and knowledge managment, learning, selfhosting and more.
