@@ -65,3 +65,44 @@
     });
   })();
 </script>
+<script>
+  (() => {
+    const eventForLink = (link) => {
+      const url = new URL(link.href, window.location.origin);
+
+      if (url.pathname.endsWith('.pdf') && url.pathname.includes('/files/cv/')) {
+        return 'cv-download';
+      }
+
+      if (url.protocol === 'mailto:') {
+        return 'email-click';
+      }
+
+      if (url.hostname === 'github.com') {
+        return 'github-click';
+      }
+
+      if (url.hostname === 'www.linkedin.com' || url.hostname === 'linkedin.com') {
+        return 'linkedin-click';
+      }
+
+      if (url.hostname === 'scholar.google.de' || url.hostname === 'scholar.google.com') {
+        return 'scholar-click';
+      }
+
+      return url.origin !== window.location.origin ? 'outbound-click' : null;
+    };
+
+    document.addEventListener('click', (event) => {
+      const link = event.target.closest('a[href]');
+      if (!link || !window.umami) {
+        return;
+      }
+
+      const eventName = eventForLink(link);
+      if (eventName) {
+        window.umami.track(eventName);
+      }
+    });
+  })();
+</script>
