@@ -20,19 +20,19 @@ title: "Hendrik Fischer"
 
 ## About me {#about}
 
-I am Hendrik, **a mathematician turned actuary** with an academic background in numerical mathematics and scientific computing.
-I earned my **PhD from Leibniz University Hannover** researching reduced-order modeling for physical systems such as fluid dynamics and porous media.
-There, I developed data-driven numerical models designed to minimize computational effort by dynamically adapting to new parametric conditions.
+Hi! I am Hendrik, **a mathematician turned actuary**.
+During my PhD, I researched reduced-order modeling for physical systems such as fluid dynamics and porous media and developed adaptive data-driven numerical models designed to minimize computational effort.
 
-After my PhD in 2024, **I transitioned into the insurance industry as a reserving actuary**, and I am currently **pursuing qualification as a DAV actuary**.
-My work can be summarized by this credo:
+After my PhD, **I transitioned into the insurance industry as a reserving actuary**, and I am currently pursuing qualification as a **DAV actuary**.
+I see myself as an innovative actuary with a strong technical leaning trying to move forward the profession using code and new technologies like AI.
+My work philosophy in a sentence:
 
-> **Actuaries write code.**[^cypherpunk]
-> As modern actuaries, we move beyond spreadsheets and proprietary black boxes. We build reliable, open, and transparent systems - tools that scale and last.
+>[!quote] **Actuaries write code.**[^cypherpunk]
+> As modern actuaries, we move beyond spreadsheets and proprietary black boxes. We build reliable, open, and transparent systems and tools that scale and last.
 
 [^cypherpunk]: Paraphrased from Eric Hughes' [A Cypherpunk's Manifest](https://nakamotoinstitute.org/library/cypherpunk-manifesto/)
 
-Outside of work, I am passionate about programming, investing, personal development, and Bitcoin (not crypto).
+Outside of work, I am passionate about programming, personal finance, my cats, personal development, and Bitcoin; [not crypto](https://dergigi.com/threads/maximalism).
 I feel most comfortable using Python and AI to tackle challenges I encounter both at work and beyond, and I love building automations that make my life easier (like building this website; thanks [opencode](https://opencode.ai)).
 
 ## My Resume {#cv}
