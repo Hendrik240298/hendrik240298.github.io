@@ -203,6 +203,40 @@ a.wikilink:hover {
   color: #aabaca;
 }
 
+.post-content blockquote.callout {
+  padding: 0.9em 1em;
+  border: 1px solid var(--border);
+  border-inline-start: 3px solid #91a0b3;
+  background: var(--entry);
+  color: var(--content);
+}
+
+.post-content blockquote.callout .callout-title {
+  display: flex;
+  align-items: center;
+  gap: 0.45em;
+  margin-bottom: 0.65em;
+  color: var(--secondary);
+  font-family: 'Fira Sans', 'Noto Sans', Arial, sans-serif;
+  font-size: 0.9em;
+  font-weight: 700;
+}
+
+.post-content blockquote.callout .callout-title > strong {
+  color: #c8a5dc;
+}
+
+.post-content blockquote.callout .callout-title::before {
+  content: '"';
+  color: #91a0b3;
+  font-size: 1.4em;
+  line-height: 0.8;
+}
+
+.post-content blockquote.callout > :last-child {
+  margin-bottom: 0;
+}
+
 .post-content table th,
 .post-content table:not(.highlighttable, .highlight table, .gist .highlight) td {
   border-color: var(--border);

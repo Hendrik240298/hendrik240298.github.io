@@ -63,6 +63,48 @@
         node.replaceWith(fragment);
       });
     });
+
+    document.querySelectorAll('.post-content blockquote').forEach((blockquote) => {
+      const firstParagraph = blockquote.querySelector(':scope > p');
+      const firstTextNode = [...(firstParagraph?.childNodes || [])].find(
+        (node) => node.nodeType === Node.TEXT_NODE && node.nodeValue.trim(),
+      );
+      const marker = firstTextNode?.nodeValue.match(/^\[!quote\](?:[ \t]*([^\n]*))?(?:\n|$)/i);
+
+      if (!marker) {
+        return;
+      }
+
+      firstTextNode.nodeValue = firstTextNode.nodeValue.slice(marker[0].length);
+      const title = document.createElement('div');
+      title.className = 'callout-title';
+      const titleText = marker[1]?.trim();
+
+      if (titleText) {
+        title.textContent = titleText;
+      } else {
+        // In an untitled callout, promote an opening bold phrase into its title.
+        if (!firstTextNode.nodeValue.trim()) {
+          firstTextNode.remove();
+        }
+
+        const boldTitle = firstParagraph.querySelector(':scope > strong');
+        if (boldTitle) {
+          const footnote = firstParagraph.querySelector(':scope > sup');
+          if (footnote) {
+            boldTitle.append(footnote);
+          }
+          title.append(boldTitle);
+        }
+      }
+
+      if (!firstParagraph.textContent.trim() && !firstParagraph.children.length) {
+        firstParagraph.remove();
+      }
+
+      blockquote.classList.add('callout', 'callout-quote');
+      blockquote.prepend(title);
+    });
   })();
 </script>
 <script>
